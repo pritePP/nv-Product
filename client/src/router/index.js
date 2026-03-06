@@ -64,6 +64,27 @@ const router = createRouter({
       name: 'blog',
       component: BlogShow
     },
+
+{
+ path:'/products',
+ name:'products',
+ component:()=>import('../components/Product/Index.vue')
+},
+{
+  path:'/product/create',
+  name:'product-create',
+  component:()=>import('../components/Product/CreateProduct.vue')
+},
+{
+ path:'/product/:id',
+ name:'product',
+ component:()=>import('../components/Product/ShowProduct.vue')
+},
+{
+ path:'/product/edit/:id',
+ name:'product-edit',
+ component:()=>import('../components/Product/EditProduct.vue')
+}
   ]
 })
 
